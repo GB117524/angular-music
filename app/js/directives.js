@@ -4,11 +4,11 @@
 
 var musicApp = angular.module('musicDirectives', []);
 
-musicApp.directive('chart', function() {
+musicApp.directive('NowPlaying', function() {
     return {
         restrict: 'A',
         scope: {
-            value: '=' // '=' indicates 2 way binding
+            value: '=' 
         },
         template: "<div> Now Playing : {{value}} </div>"
     };

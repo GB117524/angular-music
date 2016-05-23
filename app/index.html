@@ -8,43 +8,17 @@
   <script src="bower_components/angular/angular.js"></script>
    <script src="js/controllers.js" ></script>
     <script src="js/directives.js"></script>
+    <script src="angular-youtube-api-factory.min.js"></script>
 </head>
 <body ng-controller="SearchController as searchCtrl" >
 
-<!--<div ng-controller="Hello">-->
-    <!--<p>The ID is {{greeting.id}}</p>-->
-    <!--<p>The content is {{greeting.content}}</p>-->
-<!--</div>-->
-
-<!--<div >-->
-    <!--<form name="bandSearch" ng-submit="searchCtrl.findArtist()">-->
-    <!--<span><input type="text" ng-model="searchCtrl.searchString" class="form-control" placeholder="Search for a band to start"/>-->
-            <!--<input type="submit" class="btn btn-primary pull-right" value="Search!" /></span>-->
-    <!--</form>-->
-    <!--<p ng-show="searchCtrl.searchHistory.length">You've searched for:</p>-->
-    <!--<ul ng-repeat="search in searchCtrl.searchHistory">-->
-       <!--<li> {{search}}</li>-->
-    <!--</ul>-->
-
-
-    <!--<p ng-show="searchCtrl.searchResults.artists">Results</p>-->
-    <!--<ul ng-repeat="artist in searchCtrl.searchResults.artists.items">-->
-        <!--<li>Name: {{artist.name}}</li>-->
-    <!--</ul>-->
-
-
-<!--</div>-->
-<!--<div ng-controller="LastFmController as lastFmCtrl">-->
-    <!--<input type="submit" class="btn btn-primary pull-right" value="Now Playing" ng-click="lastFmCtrl.nowPlaying()"/>-->
-<!--</div>-->
-
 <p>Now Playing {{nowPlaying.artist['#text']}}</p>
-    <!--<form name="alert" ng-controller="AlertController as AlertCtrl" ng-submit="AlertCtrl.alert()">-->
-    <!--<input type="submit" value="ALERT!"/>-->
-    <!--</form>-->
-<div ng-controller="Ctrl1">
+
+<div ng-controller="NowPlayingUpdate">
     <div data-chart data-value="value"></div>
 </div>
+
+<div now-playing></div>
 
 </body>
 </html>
