@@ -77,13 +77,23 @@ musicApp.controller("YouTubeSearch", function ($scope,$http, $rootScope, youtube
 
 });
 
+musicApp.directive('testFooBar', function()
+{
+    return{
+        restrict: 'E',
+        templateUrl: 'test.html'
+    };
+});
+
 musicApp.controller('NowPlayingUpdate', function($scope, $rootScope, $timeout, $http) {
+
     var poll;
     poll = function () {
         $timeout(function () {
             var apiKey = "f3b3f5f21a179582edf96ff2269d5754";
             var user = "KingKudos";
             var query = 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=' + user + '&api_key=' + apiKey + '&format=json';
+            //start spinner
             $scope.loading = true;
             $http.get(query).success(function (response) {
                 if (JSON.stringify($rootScope.nowPlaying) !== JSON.stringify(response.recenttracks.track[0])) {

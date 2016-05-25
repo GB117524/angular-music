@@ -2,7 +2,7 @@
 <html lang="en" ng-app = "musicApp">
 <head>
   <meta charset="utf-8">
-  <title>My HTML File</title>
+  <title>Now Playing  {{nowPlaying.artist['#text']}}</title>
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="css/app.css">
   <script src="bower_components/angular/angular.js"></script>
@@ -12,10 +12,13 @@
 </head>
 <body ng-controller="SearchController as searchCtrl" >
 
-<p>Now Playing {{nowPlaying.artist['#text']}}</p>
+<!--<p>Now Playing {{nowPlaying.artist['#text']}}</p>-->
+<now-playing track="{{nowPlaying}}"></now-playing>
+
+<test-foo-bar value="foo"></test-foo-bar>
 
 <div ng-controller="NowPlayingUpdate">
-    <div data-chart data-value="value"></div>
+    <!--<img src="img/loading.gif" ng-show="loading">-->
 </div>
 
 <div ng-controller="YouTubeSearch as youtubeSearch">

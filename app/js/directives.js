@@ -2,14 +2,16 @@
 
 /* Directives */
 
-var musicApp = angular.module('musicDirectives', []);
+var musicDirectives = angular.module('musicDirectives', []);
 
-musicApp.directive('NowPlaying', function() {
+musicDirectives.directive('nowPlaying', function() {
     return {
-        restrict: 'A',
+        restrict: 'E',
         scope: {
-            value: '=' 
+            track: '=track'
         },
-        template: "<div> Now Playing : {{value}} </div>"
+        templateUrl: '../now-playing.html'
     };
 });
+
+
