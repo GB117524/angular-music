@@ -4,26 +4,35 @@
   <meta charset="utf-8">
   <title>Now Playing  {{nowPlaying.artist['#text']}}</title>
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-  <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/app.css">
   <script src="bower_components/angular/angular.js"></script>
   <script src="js/controllers.js" ></script>
   <script src="js/directives.js"></script>
   <script src="../node_modules/angular-youtube-api-factory/src/angular-youtube-api-factory.js"></script>
 </head>
-<body ng-controller="SearchController as searchCtrl" >
+<body  >
 
 <!--<p>Now Playing {{nowPlaying.artist['#text']}}</p>-->
 
 
-<div ng-controller="NowPlayingUpdate">
-    <now-playing track="nowPlaying"></now-playing>
-    <!--<img src="img/loading.gif" ng-show="loading">-->
-</div>
 
-<div ng-controller="YouTubeSearch as youtubeSearch">
-    <ng-repeat ng-repeat="youTubeResult in youtubeSearch.searchResults.items">
-        <img id="youtube-snippet" ng-src="{{youTubeResult.snippet.thumbnails.high.url}}" alt="{{youtube.snippet.title}}" />
-    </ng-repeat>
+<div class="right-wrapper">
+    <div class="right">
+    <you-tube-videos track="nowPlaying"></you-tube-videos>
+</div>
+</div>
+<div class="left">
+    <div ng-controller="NowPlayingUpdate">
+        <now-playing track="nowPlaying" ng-hide="loading"></now-playing>
+        <img src="img/loading.gif" ng-show="loading">
+    </div>
+
+    <div ng-controller="GigLister as giglist">
+        <div ng-repeat="gigs in giglist.tourDetails">
+
+            <p>Title: {{gigs.title}}</p>
+        </div>
+    </div>
 </div>
 
 </body>

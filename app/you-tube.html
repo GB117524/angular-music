@@ -1,0 +1,12 @@
+<div ng-controller="YouTubeSearch as youtubeSearch">
+    <ng-repeat ng-repeat="youTubeResult in youtubeSearch.searchResults.items">
+        <table class="nowplaying" style="display: inline-block">
+            <tr><td>
+                <img id="youtube-snippet" ng-src="{{youTubeResult.snippet.thumbnails.high.url}}" alt="{{youtube.snippet.title}}" /></td><tr><td>
+            <p align="center">{{youTubeResult.snippet.title}}</p>
+        </td></tr>
+            </tr>
+        </table>
+        </table>
+    </ng-repeat>
+</div>

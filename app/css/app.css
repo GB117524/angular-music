@@ -1,24 +1,58 @@
-/* app css stylesheet */
-
 body{
     background-image: url("http://www.publicdomainpictures.net/pictures/170000/velka/dancing-rock-concert-crowd.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
 }
 
-.nowplaying-image {
-    width:180px;
-    border:10px;
+.right {
+    margin-left: 400px;
 }
-.nowplaying-text {
-    margin-left:10px;
-    width:500px;
-    border:10px;
-    border-color: #261a3b;
+.right-wrapper {
+    float: left;
+    width: 100%;
+}
+
+.left {
+    float: left;
+    width: 400px;
+    margin-left: -100%;
+}
+
+img.nowplaying-image {
+    padding-left: 10px;
+    padding-bottom: 10px;
 }
 
 .nowplaying{
+    margin-left: 20px;
+    margin-top:20px;
+    border-radius: 10px;
+    background-color: #2b542c;
+    font-family: Tahoma;
+    color: #8699a4 ;
+    text-shadow: 2px 2px 8px #000000;
+    max-width: 500px;
+
+}
+
+.fade {
+    transition: 1s linear all;
+    -webkit-transition: 1s linear all;
+}
+
+.fade.ng-enter {
+    opacity: 0;
+}
+
+h3.nowplaying{
+    text-align: center;
+    margin: 5px;
+    line-height: 70%;
+
 
 }
 
 #youtube-snippet{
-    margin: 100px 150px 100px 80px;
+    margin: 10px 15px 10px 8px;
 }
