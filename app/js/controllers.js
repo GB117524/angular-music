@@ -10,6 +10,16 @@ musicApp.config(['$httpProvider', function($httpProvider) {
 }
 ]);
 
+musicApp.directive('nowPlaying', function() {
+    return {
+        restrict: 'E',
+        scope: {
+            track: '=track'
+        },
+        templateUrl: 'now-playing.html'
+    };
+});
+
 musicApp.run(function($rootScope){
     //$rootScope.nowPlaying = {'artist' : {'#text' : 'Cool and the Gang'}};
     $rootScope.nowPlaying = {};
@@ -77,13 +87,7 @@ musicApp.controller("YouTubeSearch", function ($scope,$http, $rootScope, youtube
 
 });
 
-musicApp.directive('testFooBar', function()
-{
-    return{
-        restrict: 'E',
-        templateUrl: 'test.html'
-    };
-});
+
 
 musicApp.controller('NowPlayingUpdate', function($scope, $rootScope, $timeout, $http) {
 

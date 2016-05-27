@@ -1,5 +1,10 @@
-
-<h3>Now Playing</h3>
-<p>Track : {{nowPlaying.name}}</p>
-<p>Album : {{nowPlaying.album['#text']}}</p>
-<p>Artist : {{nowPlaying.artist['#text']}}</p>
+  <table class="nowplaying" border="0">
+  <tr><td colspan=2><h3>Now Playing</h3></td></tr>
+  <tr><td>
+    <img src="http://img2-ak.lst.fm/i/u/174s/8cb6ec8a568c456d8603d5279a3f7d71.png">
+  </td><td>
+    <p>Track : {{track.name}}</p>
+    <p>Album : {{track.album['#text']}}</p>
+    <p class="myNewStyle">Artist : {{track.artist['#text']}}</p>
+  </td></tr>
+  </table>

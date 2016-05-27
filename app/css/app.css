@@ -1,1 +1,24 @@
 /* app css stylesheet */
+
+body{
+    background-image: url("http://www.publicdomainpictures.net/pictures/170000/velka/dancing-rock-concert-crowd.jpg");
+}
+
+.nowplaying-image {
+    width:180px;
+    border:10px;
+}
+.nowplaying-text {
+    margin-left:10px;
+    width:500px;
+    border:10px;
+    border-color: #261a3b;
+}
+
+.nowplaying{
+
+}
+
+#youtube-snippet{
+    margin: 100px 150px 100px 80px;
+}
